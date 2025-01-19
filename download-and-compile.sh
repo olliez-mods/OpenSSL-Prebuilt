@@ -7,12 +7,19 @@ set -e
 # gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 openssl libssl-dev ca-certificates
 # =============================================================
 
-# ================== DEFINE THE VERSION HERE ==================
+# ================== DEFINE THE VERSION AND ARCHITECTURE HERE ==================
 OPENSSL_VERSION="openssl-3.0.15"
+ARCH="x86_64" # Change to "i686" for 32-bit
 # =============================================================
 
+# Validate architecture
+if [ "$ARCH" != "x86_64" ] && [ "$ARCH" != "i686" ]; then
+    echo "Error: ARCH must be either 'x86_64' or 'i686'."
+    exit 1
+fi
+
 # Start...
-echo Building ${OPENSSL_VERSION}...
+echo Building ${OPENSSL_VERSION} for ${ARCH}...
 echo
 
 echo Deleting old files...
@@ -40,7 +47,11 @@ echo
 echo "Configuring and building OpenSSL..."
 mkdir precomp
 cd source
-./Configure mingw no-shared --cross-compile-prefix=i686-w64-mingw32- --prefix=$(pwd)/../precomp
+if [ "$ARCH" == "x86_64" ]; then
+    ./Configure mingw64 no-shared --cross-compile-prefix=x86_64-w64-mingw32- --prefix=$(pwd)/../precomp
+else
+    ./Configure mingw no-shared --cross-compile-prefix=i686-w64-mingw32- --prefix=$(pwd)/../precomp
+fi
 make && make install
 echo
 
