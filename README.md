@@ -19,7 +19,7 @@ sudo apt-get install g++ make cmake wget git mingw-w64 mingw-w64-tools gcc-mingw
 
 1. Clone this repository:
     ```
-    git clone <repository-url>
+    git clone https://github.com/olliez-mods/OpenSSL-Prebuilt
     cd OpenSSL-Libs
     ```
 
@@ -31,7 +31,7 @@ sudo apt-get install g++ make cmake wget git mingw-w64 mingw-w64-tools gcc-mingw
 
 3. Run the build script using Ubuntu/WSL/Docker (Make sure carrege returns are handled):
     ```
-    ./download-and-compile.sh
+    sudo ./download-and-compile.sh
     ```
 
 The script will download the specified version of OpenSSL, extract it, and build it using MinGW.
@@ -51,5 +51,5 @@ For more details, refer to the `download-and-compile.sh` script in this reposito
 
 You can download the prebuilt binaries from the releases section:
 
-- [64-bit OpenSSL](https://github.com/not-yet/releases/download/v1.0/openssl-3.0.15-x86_64.zip)
-- [32-bit OpenSSL](https://github.com/not-yet/releases/download/v1.0/openssl-3.0.15-i686.zip)
+- [64-bit OpenSSL 3.0.15](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.0.15-x86_64)
+- [32-bit OpenSSL 3.0.15](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.0.15-i686)
