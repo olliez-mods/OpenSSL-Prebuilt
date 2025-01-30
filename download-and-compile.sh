@@ -23,13 +23,13 @@ echo Building ${OPENSSL_VERSION} for ${ARCH}...
 echo
 
 echo Deleting old files...
-rm -rf ${OPENSSL_VERSION}
+rm -rf ${OPENSSL_VERSION}-${ARCH}
 rm -rf ${OPENSSL_VERSION}.tar.gz
 echo
 
 # All left over files (source and precomp) will be stored in this folder
-mkdir ${OPENSSL_VERSION}
-cd ${OPENSSL_VERSION}
+mkdir ${OPENSSL_VERSION}-${ARCH}
+cd ${OPENSSL_VERSION}-${ARCH}
 
 # Download OpenSSL
 echo "Downloading ${OPENSSL_VERSION}..."
