@@ -36,11 +36,11 @@ echo "Downloading ${OPENSSL_VERSION}..."
 wget https://www.openssl.org/source/${OPENSSL_VERSION}.tar.gz
 echo
 
-# Download, extract and move OpenSSL
+# Extract and move OpenSSL
 echo "Extracting OpenSSL..."
 tar -xzvf ${OPENSSL_VERSION}.tar.gz
 rm -rf ${OPENSSL_VERSION}.tar.gz
-mv ${OPENSSL_VERSION} source # This sometimes fails, but it's not a problem, run the script again
+mv ${OPENSSL_VERSION} source # This sometimes fails when using WSL, try running the script again
 echo
 
 # Configure and build OpenSSL, using local install directory
