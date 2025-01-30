@@ -51,9 +51,11 @@ For more details, refer to the `download-and-compile.sh` script in this reposito
 
 You can download the prebuilt binaries from the releases section:
 # 64-bit:
+- [3.2.3 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.2.3-x86_64)
 - [3.1.7 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.1.7-x86_64)
 - [3.0.15 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.0.15-x86_64)
   
 # 32-bit
+- [3.2.3 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.2.3-i686)
 - [3.1.7 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.1.7-i686)
 - [3.0.15 - OpenSSL](https://github.com/olliez-mods/OpenSSL-Prebuilt/releases/tag/3.0.15-i686)
